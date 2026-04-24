@@ -1,0 +1,569 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="géraldine lutz coaching – Sinn, Freude und Leichtigkeit" description="Coaching für Veränderung und Neuorientierung. Finde mehr Sinn, Freude und Leichtigkeit in deinem Beruf und Leben. Géraldine Lutz, Jegenstorf.">
+
+  <!-- Google Fonts for variant exploration -->
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link slot="head" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ========== VARIANT TOGGLE ========== -->
+  <div id="variant-toggle" class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-center gap-1 py-2.5 px-4 bg-[#0a0a1a]/95 backdrop-blur-md border-b border-white/10" style="font-family: 'Outfit', sans-serif;">
+    <span class="text-white/40 text-xs font-medium tracking-wider uppercase mr-3 hidden sm:inline">Design&thinsp;Variante</span>
+    <button data-variant="a" class="variant-btn active px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 bg-[#F5C518] text-[#0a0a1a]">
+      A — Editorial
+    </button>
+    <button data-variant="b" class="variant-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 bg-white/10 text-white/60 hover:bg-white/20">
+      B — Organic
+    </button>
+    <button data-variant="c" class="variant-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 bg-white/10 text-white/60 hover:bg-white/20">
+      C — Minimal
+    </button>
+  </div>
+  <div class="h-11"></div>
+
+  <!-- ============================================================ -->
+  <!-- VARIANT A — "EDITORIAL WARMTH"                                -->
+  <!-- Magazine-style, oversized serif, asymmetric, warm & confident -->
+  <!-- ============================================================ -->
+  <div id="variant-a" class="variant-content">
+    <style>
+      #variant-a { --va-blue: #141878; --va-gold: #F5C518; --va-cream: #FAF8F3; --va-ink: #1a1a2e; --va-muted: #7a7a8e; }
+    </style>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden" style="background: var(--va-cream); min-height: 100vh; display: flex; align-items: center;">
+      <!-- Diagonal gold accent stripe -->
+      <div class="absolute top-0 right-0 w-[55%] h-full" style="background: var(--va-gold); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+      <!-- Noise texture overlay -->
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,<svg viewBox=&quot;0 0 256 256&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><filter id=&quot;n&quot;><feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot; numOctaves=&quot;4&quot; stitchTiles=&quot;stitch&quot;/></filter><rect width=&quot;100%25&quot; height=&quot;100%25&quot; filter=&quot;url(%23n)&quot;/></svg>'); background-size: 200px;"></div>
+
+      <!-- Butterfly watermark on gold side -->
+      <img src="/images/misc/schmetterling.png" alt="" aria-hidden="true" class="absolute right-[5%] top-[10%] w-[300px] lg:w-[420px] opacity-20 mix-blend-multiply pointer-events-none select-none" />
+
+      <div class="relative max-w-7xl mx-auto px-6 sm:px-10 py-20 w-full">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <!-- Left: Text -->
+          <div class="lg:col-span-6 xl:col-span-5 z-10">
+            <p class="text-xs font-semibold tracking-[0.3em] uppercase mb-6" style="font-family: 'Outfit', sans-serif; color: var(--va-muted);">
+              Coaching &middot; Veränderung &middot; Neuorientierung
+            </p>
+            <h1 class="leading-[0.95] mb-6" style="font-family: 'DM Serif Display', serif; color: var(--va-blue);">
+              <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">Sinn,</span>
+              <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">Freude</span>
+              <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">& <em class="italic" style="color: var(--va-gold); -webkit-text-stroke: 1px var(--va-blue);">Leichtig&shy;keit</em></span>
+            </h1>
+            <p class="text-base sm:text-lg max-w-md leading-relaxed mb-8" style="font-family: 'Outfit', sans-serif; color: var(--va-muted);">
+              Du sehnst dich nach Veränderung? Gemeinsam finden wir heraus, was dich wirklich antreibt — und wie du dort hinkommst.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold rounded-none transition-all duration-300 hover:-translate-y-0.5"
+                style="font-family: 'Outfit', sans-serif; background: var(--va-blue); color: white;">
+                Kennenlerngespräch buchen
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="/angebot"
+                class="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-none border-2 transition-all duration-300 hover:-translate-y-0.5"
+                style="font-family: 'Outfit', sans-serif; border-color: var(--va-blue); color: var(--va-blue);">
+                Zum Angebot
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Portrait breaking into the gold zone -->
+          <div class="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-end z-10">
+            <div class="relative">
+              <div class="absolute -inset-6 border-2 -rotate-3 hidden lg:block" style="border-color: var(--va-blue);"></div>
+              <img src="/images/portraits/geraldine-lutz.png" alt="Géraldine Lutz"
+                class="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] object-cover object-top shadow-2xl"
+                style="clip-path: polygon(0 0, 100% 0, 100% 92%, 8% 100%);" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schmerzpunkte -->
+    <section class="py-20 sm:py-28" style="background: white;">
+      <div class="max-w-6xl mx-auto px-6 sm:px-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-24 h-24" style="background: var(--va-gold); opacity: 0.15;"></div>
+            <img src="/images/illustrations/schmerzpunkte.png" alt="Schmerzpunkte" class="relative w-full max-w-md" />
+          </div>
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-[2px]" style="background: var(--va-gold);"></div>
+              <p class="text-xs font-semibold tracking-[0.25em] uppercase" style="font-family: 'Outfit', sans-serif; color: var(--va-muted);">Die Frage</p>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-8 leading-tight" style="font-family: 'DM Serif Display', serif; color: var(--va-blue);">
+              Fühlst du Frust<br/>oder <em class="italic" style="color: var(--va-gold);">Leichtigkeit?</em>
+            </h2>
+            <div class="space-y-4 leading-relaxed" style="font-family: 'Outfit', sans-serif; color: var(--va-muted);">
+              <p>Quälst du dich jeden Morgen aus dem Bett, schleppst dich lustlos zur Arbeit und lebst nur für den Feierabend? Bist du erschöpft und dennoch innerlich rastlos?</p>
+              <p class="font-medium" style="color: var(--va-ink);">Dann ist es Zeit, dir selbst ein paar wichtige Fragen zu stellen:</p>
+              <ul class="space-y-3 mt-4">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 w-2 h-2 rounded-full shrink-0" style="background: var(--va-gold);"></span>
+                  <span>Was ist der wahre Grund für deine Unzufriedenheit?</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 w-2 h-2 rounded-full shrink-0" style="background: var(--va-gold);"></span>
+                  <span>Wie kannst du aktiv Einfluss auf deine Situation nehmen?</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 w-2 h-2 rounded-full shrink-0" style="background: var(--va-gold);"></span>
+                  <span>Welche Schritte kannst du unternehmen, um deine Lage zu verbessern?</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 w-2 h-2 rounded-full shrink-0" style="background: var(--va-gold);"></span>
+                  <span>Was hält dich bisher davon ab?</span>
+                </li>
+              </ul>
+            </div>
+            <a href="/angebot" class="inline-flex items-center gap-2 mt-8 text-sm font-semibold tracking-wide transition-all hover:gap-3" style="font-family: 'Outfit', sans-serif; color: var(--va-blue);">
+              Zum Angebot
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Begleiterin -->
+    <section class="relative py-20 sm:py-28 overflow-hidden" style="background: var(--va-blue);">
+      <img src="/images/misc/schmetterling.png" alt="" aria-hidden="true" class="absolute right-[-5%] bottom-[-10%] w-80 opacity-10 pointer-events-none select-none" />
+      <div class="relative max-w-4xl mx-auto px-6 sm:px-10 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-[2px] bg-white/20"></div>
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-white/40" style="font-family: 'Outfit', sans-serif;">Über mich</p>
+          <div class="w-12 h-[2px] bg-white/20"></div>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-8 text-white" style="font-family: 'DM Serif Display', serif;">
+          Deine Begleiterin
+        </h2>
+        <div class="space-y-5 max-w-2xl mx-auto text-white/70 leading-relaxed" style="font-family: 'Outfit', sans-serif;">
+          <p>Als Dipl. Coach für Business und Leadership und betriebliche Mentorin mit eidg. FA schaffe ich den Rahmen für dich, in welchem du dich unbeschwert zeigen und entfalten darfst.</p>
+          <p>Was macht für dich Sinn? Was bereitet dir Freude? Was bedeutet Leichtigkeit für dich? Durch meine Fragen und Methoden kommst du dem Grund deines Anliegens auf die Spur.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="/ueber-mich" class="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-none transition-all hover:-translate-y-0.5" style="font-family: 'Outfit', sans-serif; background: var(--va-gold); color: var(--va-blue);">
+            Mehr zu mir
+          </a>
+          <a href="/angebot" class="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-none border-2 border-white/30 text-white transition-all hover:bg-white/10" style="font-family: 'Outfit', sans-serif;">
+            Zum Angebot
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 sm:py-28" style="background: var(--va-gold);">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-4" style="font-family: 'DM Serif Display', serif; color: var(--va-blue);">
+          Bereit für den ersten Schritt?
+        </h2>
+        <p class="text-lg mb-10" style="font-family: 'Outfit', sans-serif; color: var(--va-blue); opacity: 0.7;">
+          In einem kostenlosen 20-Minuten-Gespräch finden wir gemeinsam heraus, wie ich dich unterstützen kann.
+        </p>
+        <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 text-base font-bold transition-all hover:-translate-y-0.5 shadow-xl"
+          style="font-family: 'Outfit', sans-serif; background: var(--va-blue); color: white;">
+          Kostenloses Kennenlerngespräch
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- VARIANT B — "ORGANIC FLOW"                                    -->
+  <!-- Flowing shapes, soft gradients, nature-inspired, feminine     -->
+  <!-- ============================================================ -->
+  <div id="variant-b" class="variant-content hidden">
+    <style>
+      #variant-b {
+        --vb-navy: #1a1f6e; --vb-gold: #F5C518; --vb-warm: #FFF9EB; --vb-sand: #F2ECE0;
+        --vb-ink: #1c1c30; --vb-muted: #6e6e82;
+      }
+      #variant-b .blob-shape { border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%; }
+      @keyframes morphBlob {
+        0%, 100% { border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%; }
+        33% { border-radius: 45% 55% 40% 60% / 60% 45% 55% 40%; }
+        66% { border-radius: 50% 50% 45% 55% / 45% 55% 50% 50%; }
+      }
+      #variant-b .blob-animate { animation: morphBlob 12s ease-in-out infinite; }
+      @keyframes floatUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      #variant-b .float-in { animation: floatUp 0.8s ease-out both; }
+      #variant-b .float-in-d1 { animation-delay: 0.1s; }
+      #variant-b .float-in-d2 { animation-delay: 0.25s; }
+      #variant-b .float-in-d3 { animation-delay: 0.4s; }
+      #variant-b .float-in-d4 { animation-delay: 0.55s; }
+    </style>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden" style="background: var(--vb-warm); min-height: 100vh; display: flex; align-items: center;">
+      <!-- Organic blob shapes -->
+      <div class="absolute top-[-15%] right-[-10%] w-[600px] h-[600px] blob-animate opacity-[0.07]" style="background: var(--vb-navy);"></div>
+      <div class="absolute bottom-[-20%] left-[-15%] w-[500px] h-[500px] blob-animate opacity-[0.04]" style="background: var(--vb-gold); animation-delay: -4s;"></div>
+
+      <!-- Subtle butterfly -->
+      <img src="/images/misc/schmetterling.png" alt="" aria-hidden="true" class="absolute right-[8%] top-[15%] w-40 sm:w-56 opacity-[0.08] pointer-events-none select-none" />
+
+      <div class="relative max-w-7xl mx-auto px-6 sm:px-10 py-16 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          <!-- Left: Portrait in organic shape -->
+          <div class="flex justify-center lg:justify-start order-2 lg:order-1 float-in">
+            <div class="relative">
+              <!-- Gold ring blob -->
+              <div class="absolute -inset-4 blob-animate" style="background: linear-gradient(135deg, var(--vb-gold) 0%, transparent 60%); opacity: 0.3;"></div>
+              <div class="relative w-72 sm:w-80 lg:w-[360px] aspect-square overflow-hidden blob-shape blob-animate shadow-2xl">
+                <img src="/images/portraits/geraldine-lutz.png" alt="Géraldine Lutz" class="w-full h-full object-cover" />
+              </div>
+              <!-- Floating badge -->
+              <div class="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 px-5 py-3 rounded-2xl shadow-lg float-in-d3" style="background: var(--vb-navy);">
+                <p class="text-white text-xs font-semibold" style="font-family: 'Manrope', sans-serif;">Coach &middot; Mentorin</p>
+                <p class="text-[10px] mt-0.5" style="color: var(--vb-gold); font-family: 'Manrope', sans-serif;">Jegenstorf, Schweiz</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Text -->
+          <div class="order-1 lg:order-2 text-center lg:text-left">
+            <p class="text-xs font-medium tracking-[0.2em] uppercase mb-5 float-in" style="font-family: 'Manrope', sans-serif; color: var(--vb-muted);">
+              Coaching für Veränderung
+            </p>
+            <h1 class="leading-[1.1] mb-6 float-in float-in-d1" style="font-family: 'Fraunces', serif; color: var(--vb-navy);">
+              <span class="block text-4xl sm:text-5xl lg:text-6xl font-light">Finde deinen</span>
+              <span class="block text-5xl sm:text-6xl lg:text-7xl font-bold mt-1" style="color: var(--vb-gold); text-shadow: 2px 2px 0 var(--vb-navy);">
+                Sinn
+              </span>
+              <span class="block text-3xl sm:text-4xl lg:text-5xl font-light italic mt-2 opacity-70">
+                Freude & Leichtigkeit
+              </span>
+            </h1>
+            <p class="text-base sm:text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed mb-8 float-in float-in-d2" style="font-family: 'Manrope', sans-serif; color: var(--vb-muted);">
+              Du sehnst dich nach Veränderung? Gemeinsam finden wir heraus, was dich wirklich antreibt — und wie du dort hinkommst.
+            </p>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-3 float-in float-in-d3">
+              <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                style="font-family: 'Manrope', sans-serif; background: var(--vb-navy); color: white;">
+                Kennenlerngespräch
+                <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs" style="background: var(--vb-gold); color: var(--vb-navy);">&rarr;</span>
+              </a>
+              <a href="/angebot"
+                class="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-full border-2 transition-all duration-300 hover:shadow-lg"
+                style="font-family: 'Manrope', sans-serif; border-color: var(--vb-navy); color: var(--vb-navy);">
+                Zum Angebot
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schmerzpunkte -->
+    <section class="py-20 sm:py-28 relative overflow-hidden" style="background: white;">
+      <div class="absolute top-0 left-0 w-full h-1" style="background: linear-gradient(90deg, var(--vb-gold), var(--vb-navy), var(--vb-gold));"></div>
+      <div class="max-w-6xl mx-auto px-6 sm:px-10">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-4" style="font-family: 'Fraunces', serif; color: var(--vb-navy);">
+            Fühlst du Frust oder <span style="color: var(--vb-gold);">Leichtigkeit?</span>
+          </h2>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="relative flex justify-center">
+            <div class="absolute -inset-8 rounded-[3rem] opacity-10" style="background: var(--vb-gold);"></div>
+            <img src="/images/illustrations/schmerzpunkte.png" alt="Schmerzpunkte" class="relative w-full max-w-sm rounded-3xl" />
+          </div>
+          <div>
+            <div class="space-y-4 leading-relaxed" style="font-family: 'Manrope', sans-serif; color: var(--vb-muted);">
+              <p>Quälst du dich jeden Morgen aus dem Bett, schleppst dich lustlos zur Arbeit und lebst nur für den Feierabend? Bist du erschöpft und dennoch innerlich rastlos?</p>
+              <p class="font-semibold" style="color: var(--vb-ink);">Dann ist es Zeit, dir selbst ein paar wichtige Fragen zu stellen:</p>
+            </div>
+            <div class="mt-6 space-y-3">
+              {['Was ist der wahre Grund für deine Unzufriedenheit?', 'Wie kannst du aktiv Einfluss auf deine Situation nehmen?', 'Welche Schritte kannst du unternehmen?', 'Was hält dich bisher davon ab?'].map((q, i) => (
+                <div class="flex items-start gap-4 p-4 rounded-2xl transition-colors hover:bg-[#FFF9EB]" style="font-family: 'Manrope', sans-serif;">
+                  <span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-xs font-bold" style={`background: var(--vb-gold); color: var(--vb-navy);`}>{i + 1}</span>
+                  <span class="text-sm pt-1.5" style="color: var(--vb-ink);">{q}</span>
+                </div>
+              ))}
+            </div>
+            <a href="/angebot" class="inline-flex items-center gap-2 mt-8 px-6 py-3 text-sm font-semibold rounded-full transition-all hover:shadow-lg"
+              style="font-family: 'Manrope', sans-serif; background: var(--vb-gold); color: var(--vb-navy);">
+              Zum Angebot &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Begleiterin -->
+    <section class="py-20 sm:py-28 relative" style="background: var(--vb-sand);">
+      <img src="/images/misc/schmetterling.png" alt="" aria-hidden="true" class="absolute left-[5%] top-[10%] w-32 opacity-[0.06] pointer-events-none select-none" />
+      <div class="relative max-w-4xl mx-auto px-6 sm:px-10 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-8" style="font-family: 'Fraunces', serif; color: var(--vb-navy);">
+          Deine Begleiterin
+        </h2>
+        <div class="space-y-5 max-w-2xl mx-auto leading-relaxed" style="font-family: 'Manrope', sans-serif; color: var(--vb-muted);">
+          <p>Als Dipl. Coach für Business und Leadership und betriebliche Mentorin mit eidg. FA schaffe ich den Rahmen für dich, in welchem du dich unbeschwert zeigen und entfalten darfst.</p>
+          <p>Was macht für dich Sinn? Was bereitet dir Freude? Was bedeutet Leichtigkeit für dich? Durch meine Fragen und Methoden kommst du dem Grund deines Anliegens auf die Spur.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-center gap-3">
+          <a href="/ueber-mich" class="px-7 py-3.5 text-sm font-semibold rounded-full transition-all hover:-translate-y-0.5"
+            style="font-family: 'Manrope', sans-serif; background: var(--vb-navy); color: white;">Mehr zu mir</a>
+          <a href="/angebot" class="px-7 py-3.5 text-sm font-semibold rounded-full border-2 transition-all hover:shadow-lg"
+            style="font-family: 'Manrope', sans-serif; border-color: var(--vb-navy); color: var(--vb-navy);">Zum Angebot</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative py-20 sm:py-28 overflow-hidden" style="background: var(--vb-navy);">
+      <div class="absolute -right-20 -top-20 w-96 h-96 blob-animate opacity-10" style="background: var(--vb-gold); animation-delay: -6s;"></div>
+      <div class="relative max-w-3xl mx-auto px-6 text-center">
+        <img src="/images/misc/schmetterling.png" alt="" aria-hidden="true" class="mx-auto w-16 mb-6 opacity-40" />
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-4 text-white" style="font-family: 'Fraunces', serif;">
+          Bereit für den ersten Schritt?
+        </h2>
+        <p class="text-base sm:text-lg mb-10 text-white/60" style="font-family: 'Manrope', sans-serif;">
+          In einem kostenlosen 20-Minuten-Gespräch finden wir gemeinsam heraus, wie ich dich unterstützen kann.
+        </p>
+        <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold rounded-full transition-all hover:-translate-y-1 hover:shadow-2xl"
+          style="font-family: 'Manrope', sans-serif; background: var(--vb-gold); color: var(--vb-navy);">
+          Kostenloses Kennenlerngespräch
+          <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs bg-white/20">&rarr;</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- VARIANT C — "REFINED MINIMAL"                                 -->
+  <!-- Ultra-clean, lots of whitespace, Swiss design precision,      -->
+  <!-- dramatic type scale, understated luxury                       -->
+  <!-- ============================================================ -->
+  <div id="variant-c" class="variant-content hidden">
+    <style>
+      #variant-c {
+        --vc-deep: #0f1157; --vc-gold: #e8b800; --vc-light-gold: #fdf3d0;
+        --vc-white: #ffffff; --vc-off: #f8f7f4; --vc-ink: #111127; --vc-gray: #8888a0;
+      }
+      @keyframes revealLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      #variant-c .line-reveal { animation: revealLine 1s ease-out both; transform-origin: left; }
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      #variant-c .reveal { animation: fadeSlideUp 0.7s ease-out both; }
+      #variant-c .reveal-d1 { animation-delay: 0.15s; }
+      #variant-c .reveal-d2 { animation-delay: 0.3s; }
+      #variant-c .reveal-d3 { animation-delay: 0.45s; }
+      #variant-c .reveal-d4 { animation-delay: 0.6s; }
+    </style>
+
+    <!-- Hero -->
+    <section class="relative" style="background: var(--vc-white); min-height: 100vh; display: flex; align-items: center;">
+      <!-- Minimal geometric accent -->
+      <div class="absolute top-0 right-0 w-px h-full" style="background: linear-gradient(to bottom, transparent, var(--vc-gold), transparent);"></div>
+      <div class="absolute bottom-0 left-0 w-full h-px" style="background: linear-gradient(to right, transparent, var(--vc-gold), transparent);"></div>
+
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 w-full">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          <!-- Text: occupies most of the space -->
+          <div class="lg:col-span-7 xl:col-span-8">
+            <div class="flex items-center gap-4 mb-10 reveal">
+              <div class="h-px w-16 line-reveal" style="background: var(--vc-gold);"></div>
+              <span class="text-[11px] font-medium tracking-[0.35em] uppercase" style="font-family: 'Syne', sans-serif; color: var(--vc-gray);">Coaching</span>
+            </div>
+
+            <h1 class="reveal reveal-d1" style="font-family: 'Playfair Display', serif; color: var(--vc-deep);">
+              <span class="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tight">
+                Sinn.
+              </span>
+              <span class="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tight mt-2">
+                Freude.
+              </span>
+              <span class="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tight mt-2" style="color: var(--vc-gold);">
+                Leichtigkeit.
+              </span>
+            </h1>
+
+            <div class="mt-12 flex items-start gap-8 reveal reveal-d2">
+              <div class="h-16 w-px shrink-0 hidden sm:block" style="background: var(--vc-gold);"></div>
+              <div>
+                <p class="text-sm sm:text-base max-w-md leading-relaxed" style="font-family: 'Syne', sans-serif; color: var(--vc-gray);">
+                  Du sehnst dich nach Veränderung? Gemeinsam finden wir heraus, was dich wirklich antreibt — und wie du dort hinkommst.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                  <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer"
+                    class="group inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                    style="font-family: 'Syne', sans-serif; background: var(--vc-deep); color: white;">
+                    Kennenlerngespräch
+                    <span class="w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:translate-x-1" style="background: var(--vc-gold); color: var(--vc-deep);">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                  </a>
+                  <a href="/angebot"
+                    class="inline-flex items-center px-6 py-3 text-sm font-semibold transition-all duration-300"
+                    style="font-family: 'Syne', sans-serif; color: var(--vc-deep); border-bottom: 2px solid var(--vc-gold);">
+                    Angebot ansehen
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portrait: clean, minimal -->
+          <div class="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end reveal reveal-d3">
+            <div class="relative">
+              <!-- Geometric frame -->
+              <div class="absolute -inset-3 border" style="border-color: var(--vc-gold);"></div>
+              <div class="absolute -inset-6 border border-dashed opacity-30" style="border-color: var(--vc-deep);"></div>
+              <img src="/images/portraits/geraldine-lutz.png" alt="Géraldine Lutz"
+                class="relative w-56 sm:w-64 lg:w-72 aspect-square object-cover grayscale-[20%] contrast-[1.05]" />
+              <!-- Name tag -->
+              <div class="absolute -bottom-6 left-4 px-4 py-2 shadow-sm" style="background: var(--vc-white);">
+                <p class="text-xs font-bold tracking-wider" style="font-family: 'Syne', sans-serif; color: var(--vc-deep);">GÉRALDINE LUTZ</p>
+                <p class="text-[10px] tracking-wider" style="font-family: 'Syne', sans-serif; color: var(--vc-gray);">COACH &middot; MENTORIN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schmerzpunkte -->
+    <section class="py-24 sm:py-32" style="background: var(--vc-off);">
+      <div class="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
+          <div class="lg:col-span-5 flex flex-col justify-center">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[0.95]" style="font-family: 'Playfair Display', serif; color: var(--vc-deep);">
+              Frust<br/>oder<br/><span style="color: var(--vc-gold);">Leichtig&shy;keit?</span>
+            </h2>
+            <div class="h-px w-20 mt-8 mb-6" style="background: var(--vc-gold);"></div>
+            <p class="text-sm leading-relaxed" style="font-family: 'Syne', sans-serif; color: var(--vc-gray);">
+              Quälst du dich jeden Morgen aus dem Bett, schleppst dich lustlos zur Arbeit und lebst nur für den Feierabend?
+            </p>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="space-y-0 divide-y" style="border-color: rgba(15, 17, 87, 0.08);">
+              {[
+                { num: '01', q: 'Was ist der wahre Grund für deine Unzufriedenheit?' },
+                { num: '02', q: 'Wie kannst du aktiv Einfluss auf deine Situation nehmen?' },
+                { num: '03', q: 'Welche Schritte kannst du unternehmen, um deine Lage zu verbessern?' },
+                { num: '04', q: 'Was hält dich bisher davon ab?' },
+              ].map(({ num, q }) => (
+                <div class="flex items-start gap-6 py-6 group">
+                  <span class="text-xs font-bold tracking-wider pt-1 shrink-0 transition-colors group-hover:text-[#e8b800]" style={`font-family: 'Syne', sans-serif; color: var(--vc-gray);`}>{num}</span>
+                  <p class="text-base sm:text-lg font-medium transition-colors group-hover:text-[#0f1157]" style={`font-family: 'Playfair Display', serif; color: var(--vc-ink);`}>{q}</p>
+                </div>
+              ))}
+            </div>
+            <div class="mt-8 pt-6">
+              <p class="text-sm leading-relaxed mb-6" style="font-family: 'Syne', sans-serif; color: var(--vc-gray);">
+                Ich bin hier, um dich bei der Beantwortung dieser Fragen zu unterstützen. Gemeinsam machen wir uns auf den Weg.
+              </p>
+              <a href="/angebot" class="inline-flex items-center gap-2 text-sm font-semibold transition-all hover:gap-3" style="font-family: 'Syne', sans-serif; color: var(--vc-deep);">
+                Zum Angebot
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Begleiterin -->
+    <section class="py-24 sm:py-32 relative" style="background: var(--vc-deep);">
+      <div class="absolute top-0 left-0 w-full h-px" style="background: var(--vc-gold);"></div>
+      <div class="max-w-3xl mx-auto px-6 sm:px-10 text-center">
+        <div class="flex items-center justify-center gap-6 mb-10">
+          <div class="h-px w-12" style="background: var(--vc-gold);"></div>
+          <span class="text-[11px] font-medium tracking-[0.35em] uppercase" style="font-family: 'Syne', sans-serif; color: rgba(255,255,255,0.35);">Über mich</span>
+          <div class="h-px w-12" style="background: var(--vc-gold);"></div>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-8" style="font-family: 'Playfair Display', serif;">
+          Deine Begleiterin
+        </h2>
+        <div class="space-y-5 text-sm sm:text-base leading-relaxed text-white/55" style="font-family: 'Syne', sans-serif;">
+          <p>Als Dipl. Coach für Business und Leadership und betriebliche Mentorin mit eidg. FA schaffe ich den Rahmen für dich, in welchem du dich unbeschwert zeigen und entfalten darfst.</p>
+          <p>Was macht für dich Sinn? Was bereitet dir Freude? Durch meine Fragen und Methoden kommst du dem Grund deines Anliegens auf die Spur.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="/ueber-mich" class="px-6 py-3 text-sm font-semibold transition-all hover:-translate-y-0.5"
+            style="font-family: 'Syne', sans-serif; background: var(--vc-gold); color: var(--vc-deep);">Mehr zu mir</a>
+          <a href="/angebot" class="px-6 py-3 text-sm font-semibold border text-white/70 hover:text-white transition-all"
+            style="font-family: 'Syne', sans-serif; border-color: rgba(255,255,255,0.2);">Zum Angebot</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 sm:py-32" style="background: var(--vc-light-gold);">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6" style="font-family: 'Playfair Display', serif; color: var(--vc-deep);">
+          Bereit?
+        </h2>
+        <div class="h-px w-16 mx-auto mb-6" style="background: var(--vc-deep);"></div>
+        <p class="text-sm sm:text-base mb-10" style="font-family: 'Syne', sans-serif; color: var(--vc-gray);">
+          In einem kostenlosen 20-Minuten-Gespräch finden wir gemeinsam heraus, wie ich dich unterstützen kann.
+        </p>
+        <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer"
+          class="group inline-flex items-center gap-3 px-8 py-4 text-sm font-bold transition-all hover:-translate-y-0.5 shadow-lg"
+          style="font-family: 'Syne', sans-serif; background: var(--vc-deep); color: white;">
+          Kostenloses Kennenlerngespräch
+          <span class="w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:translate-x-1" style="background: var(--vc-gold); color: var(--vc-deep);">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ========== VARIANT SWITCHER LOGIC ========== -->
+  <script>
+    const buttons = document.querySelectorAll('.variant-btn');
+    const variants = document.querySelectorAll('.variant-content');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-variant');
+
+        // Update buttons
+        buttons.forEach(b => {
+          b.classList.remove('active');
+          b.style.background = 'rgba(255,255,255,0.1)';
+          b.style.color = 'rgba(255,255,255,0.6)';
+        });
+        btn.classList.add('active');
+        btn.style.background = '#F5C518';
+        btn.style.color = '#0a0a1a';
+
+        // Show/hide variants
+        variants.forEach(v => {
+          if (v.id === `variant-${target}`) {
+            v.classList.remove('hidden');
+          } else {
+            v.classList.add('hidden');
+          }
+        });
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</BaseLayout>

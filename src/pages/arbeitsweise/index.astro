@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import Button from '../../components/ui/Button.astro';
+
+const subpages = [
+  {
+    title: 'Integrales Coaching',
+    description: 'Ich verstehe dich als vielschichtigen, ganzheitlichen Menschen und als Teil verschiedener Systeme.',
+    href: '/arbeitsweise/integrales-coaching',
+    image: '/images/illustrations/skipper.jpg',
+  },
+  {
+    title: 'Ablauf einer Sitzung',
+    description: 'Von der Situationsschilderung über die Lösungsfindung bis zur konkreten Umsetzung.',
+    href: '/arbeitsweise/ablauf-einer-sitzung',
+    image: '/images/illustrations/ablauf-coaching.jpg',
+  },
+  {
+    title: 'Das Drumherum',
+    description: 'Kennenlernen, Erstgespräch, Freiwilligkeit, Vertraulichkeit und Qualitätssicherung.',
+    href: '/arbeitsweise/drumherum',
+  },
+  {
+    title: 'Rollenverständnis',
+    description: 'Coach, Beraterin oder Trainerin – je nach dem, was dir und deinem Anliegen dient.',
+    href: '/arbeitsweise/rollenverstaendnis',
+  },
+];
+---
+
+<BaseLayout title="Arbeitsweise – géraldine lutz coaching" description="Veränderung durch Coaching: Integrales Coaching, Sitzungsablauf, Rahmenbedingungen und Rollenverständnis.">
+
+  <section class="py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <SectionHeading
+        title="Der Weg zur Veränderung"
+        subtitle="Veränderung durch Coaching"
+      />
+
+      <div class="max-w-3xl mx-auto text-text-light leading-relaxed space-y-4 mb-16">
+        <p>Im Coaching und Mentoring geht es immer um eine Veränderung. Du befindest dich an einem Punkt im Leben, an dem du erkennst, dass etwas nicht so ist, wie du es dir wünschst. Dies belastet dich auf verschiedene Weise und macht dir dein Leben schwer. Um dich wieder gut zu fühlen und das Leben zu genießen, solltest du etwas an deiner Situation ändern.</p>
+        <p>Herauszufinden, was nicht stimmt, was du dir stattdessen wünschst und wie du das in deinen Alltag bringen kannst, ist manchmal nicht einfach. In dieser Situation kann ich dich als Coach und betriebliche Mentorin unterstützen.</p>
+      </div>
+
+      <!-- Sub-page cards -->
+      <div class="grid sm:grid-cols-2 gap-6 sm:gap-8">
+        {subpages.map((page) => (
+          <a href={page.href} class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col">
+            {page.image && (
+              <div class="aspect-[16/9] overflow-hidden">
+                <img src={page.image} alt={page.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+            )}
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-semibold text-primary-dark group-hover:text-accent transition-colors">{page.title}</h3>
+              <p class="text-sm text-text-light mt-2 flex-1">{page.description}</p>
+              <span class="mt-4 text-sm font-medium text-accent group-hover:text-accent-dark transition-colors">
+                Mehr erfahren &rarr;
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-bg-alt py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-primary-dark">
+        Neugierig geworden?
+      </h2>
+      <p class="mt-3 text-text-light">
+        In einem unverbindlichen 20-Minuten-Kennenlerngespräch finden wir heraus, ob wir zusammen passen.
+      </p>
+      <div class="mt-6">
+        <Button href="https://calendly.com/coaching-geraldinelutz/20min" variant="primary" external>
+          Kennenlerngespräch buchen
+        </Button>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

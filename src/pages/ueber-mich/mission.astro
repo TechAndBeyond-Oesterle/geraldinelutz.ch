@@ -1,0 +1,30 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+const sidebarLinks = [
+  { label: 'Portrait', href: '/ueber-mich' },
+  { label: 'Laufbahn', href: '/ueber-mich/laufbahn' },
+  { label: 'Mission', href: '/ueber-mich/mission' },
+  { label: 'Haltung', href: '/ueber-mich/haltung' },
+  { label: 'Feedback', href: '/ueber-mich/feedback' },
+];
+---
+
+<ContentLayout
+  title="Mission"
+  description="Meine Mission: Menschen inspirieren, Veränderungen als Chance zu sehen."
+  sidebarTitle="Über mich"
+  sidebarLinks={sidebarLinks}
+  breadcrumbs={[
+    { label: 'Über mich', href: '/ueber-mich' },
+    { label: 'Mission' },
+  ]}
+>
+  <img src="/images/illustrations/mission.jpg" alt="Meine Mission als Coach" class="rounded-2xl shadow-md w-full mb-8" />
+
+  <p>Veränderungen sind allgegenwärtig – manche kommen von aussen, andere entstehen aus unserer inneren Sehnsucht, zu wachsen und Neues zu entdecken. Ich vermute, dass wir in den kommenden Jahren auf vielen Ebenen mit Veränderungen konfrontiert werden. Und immer wieder liegt es an uns, wie wir darauf reagieren, ob wir uns treiben lassen oder aktiv mitgestalten.</p>
+
+  <p>Deshalb ist es mir wichtig, dass ich Menschen dazu inspirieren kann, Veränderungen nicht als Bedrohung, sondern als Chance zu sehen. Mut, Neugier auf das Abenteuer Leben und der Schritt aus der Komfortzone ermöglichen es, über sich hinauszuwachsen, neue Möglichkeiten zu entdecken und die Freude darüber stärker zu spüren als die Angst vor dem Unbekannten.</p>
+
+  <p>Wer diesen Weg geht, kann Dinge erreichen, die er sich zuvor niemals zu träumen gewagt hätte.</p>
+</ContentLayout>

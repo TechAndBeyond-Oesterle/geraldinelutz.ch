@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+---
+
+<BaseLayout title="Kontakt – géraldine lutz coaching" description="Buche deinen Coaching-Termin oder nimm Kontakt auf. Géraldine Lutz, Jegenstorf.">
+
+  <section class="py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <SectionHeading title="Kontakt" subtitle="Buche deinen Termin direkt hier oder schreibe mir eine Nachricht." />
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+        <!-- Calendly -->
+        <div>
+          <h2 class="font-serif text-2xl font-semibold text-primary-dark mb-4">Termin buchen</h2>
+          <p class="text-text-light mb-6">Wähle einen passenden Termin für dein Coaching oder dein kostenloses Kennenlerngespräch:</p>
+          <div class="space-y-4">
+            <a
+              href="https://calendly.com/coaching-geraldinelutz/20min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-center px-6 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors"
+            >
+              Kostenloses Kennenlerngespräch (20 Min)
+            </a>
+            <a
+              href="https://calendly.com/coaching-geraldinelutz/coaching-a-90-minuten"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-center px-6 py-4 bg-accent hover:bg-accent-dark text-primary-dark font-bold rounded-xl transition-colors"
+            >
+              Coaching-Session buchen (90 Min)
+            </a>
+          </div>
+          <p class="text-sm text-text-light mt-4">
+            Du hast keinen passenden Termin gefunden oder hast Fragen? Dann schreibe mir gerne eine Nachricht.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h2 class="font-serif text-2xl font-semibold text-primary-dark mb-4">Kontaktinformationen</h2>
+          <div class="bg-white rounded-2xl shadow-sm p-6 sm:p-8 space-y-4">
+            <div>
+              <p class="text-sm font-medium text-text-light uppercase tracking-wider mb-1">Adresse</p>
+              <address class="not-italic text-text leading-relaxed">
+                Géraldine Lutz<br />
+                Oberdorfstrasse 25<br />
+                3303 Jegenstorf<br />
+                Schweiz
+              </address>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-text-light uppercase tracking-wider mb-1">E-Mail</p>
+              <a href="mailto:coaching@geraldinelutz.ch" class="text-primary hover:text-primary-dark transition-colors font-medium">
+                coaching@geraldinelutz.ch
+              </a>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-text-light uppercase tracking-wider mb-1">Telefon</p>
+              <a href="tel:+41799330089" class="text-primary hover:text-primary-dark transition-colors font-medium">
+                +41 79 933 00 89
+              </a>
+            </div>
+            <div class="pt-4 border-t border-bg-alt">
+              <p class="text-sm font-medium text-text-light uppercase tracking-wider mb-3">VCard</p>
+              <img src="/images/misc/qr-vcard.png" alt="QR-Code VCard" class="w-28 h-28" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+const sidebarLinks = [
+  { label: 'Portrait', href: '/ueber-mich' },
+  { label: 'Laufbahn', href: '/ueber-mich/laufbahn' },
+  { label: 'Mission', href: '/ueber-mich/mission' },
+  { label: 'Haltung', href: '/ueber-mich/haltung' },
+  { label: 'Feedback', href: '/ueber-mich/feedback' },
+];
+---
+
+<ContentLayout
+  title="Laufbahn"
+  description="Mein beruflicher Werdegang: Von der Mikrobiologin über die IT bis zum Coaching."
+  sidebarTitle="Über mich"
+  sidebarLinks={sidebarLinks}
+  breadcrumbs={[
+    { label: 'Über mich', href: '/ueber-mich' },
+    { label: 'Laufbahn' },
+  ]}
+>
+  <h2>Coachingausbildung</h2>
+  <ul>
+    <li>Betriebliche Mentorin mit eidg. FA (Living Sense, 2022 – 2023)</li>
+    <li>Dipl. Business & Leadership-Coach (Living Sense, 2021 – 2022)</li>
+    <li>Dipl. psychol. Mental & Transformations-Coach (Living Sense, 2020 – 2021)</li>
+    <li>Certified Integral Coach (Living Sense, 2019 – 2020)</li>
+  </ul>
+
+  <h2>Berufliche Laufbahn</h2>
+  <ul>
+    <li>Fotografin</li>
+    <li>Service-Spezialistin (IT)</li>
+    <li>Teamleiterin QS (IT)</li>
+    <li>System Engineer (IT)</li>
+    <li>System Specialist (IT)</li>
+    <li>Second Level Support (IT)</li>
+    <li>Au-pair</li>
+    <li>Sachbearbeiterin</li>
+    <li>allgemeine Mikrobiologin</li>
+    <li>Mitgliederanwerberin</li>
+    <li>Schraubenverpackerin</li>
+    <li>Datatypistin</li>
+  </ul>
+
+  <h2>Kindheitsträume</h2>
+  <ul>
+    <li>Tänzerin</li>
+    <li>Archäologin</li>
+    <li>Astronautin</li>
+    <li>Höhlenforscherin</li>
+    <li>Sängerin / Musikerin</li>
+    <li>Restauratorin / Malerin</li>
+  </ul>
+</ContentLayout>

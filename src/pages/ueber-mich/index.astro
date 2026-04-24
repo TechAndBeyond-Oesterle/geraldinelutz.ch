@@ -1,0 +1,37 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+const sidebarLinks = [
+  { label: 'Portrait', href: '/ueber-mich' },
+  { label: 'Laufbahn', href: '/ueber-mich/laufbahn' },
+  { label: 'Mission', href: '/ueber-mich/mission' },
+  { label: 'Haltung', href: '/ueber-mich/haltung' },
+  { label: 'Feedback', href: '/ueber-mich/feedback' },
+];
+---
+
+<ContentLayout
+  title="Über mich"
+  description="Géraldine Lutz – Coach für Veränderung und Neuorientierung in Jegenstorf."
+  sidebarTitle="Über mich"
+  sidebarLinks={sidebarLinks}
+  breadcrumbs={[{ label: 'Über mich' }]}
+>
+  <img src="/images/portraits/geraldine-lutz.png" alt="Géraldine Lutz" class="rounded-2xl shadow-lg max-w-xs w-full float-none sm:float-right sm:ml-8 sm:mb-4" />
+
+  <p>Seit 2021 begleite ich als Coach für Veränderung und Neuorientierung Menschen, die sich nach mehr Selbstbestimmung, Sinn und Freude in ihrem Leben sehnen.</p>
+
+  <p>Ich habe diesen Weg selbst durchlaufen – mit allen Höhen und Tiefen. Nach meinem naturwissenschaftlichen Studium und einem Quereinstieg in die Informatik arbeitete ich viele Jahre in spannenden, aber auch fordernden Positionen. Irgendwann spürte ich: Da muss noch mehr sein. Der Wunsch, neue Seiten an mir zu entdecken und mutig andere Wege zu gehen, brachte mich in die Fotografie – und doch fehlte mir etwas Entscheidendes: der Sinn.</p>
+
+  <p>Die Suche nach diesem Sinn führte mich zur Coachingausbildung – und damit zu meiner Berufung. Heute darf ich Menschen wie dich auf ihrer Reise begleiten, wenn sie den nächsten Schritt wagen, über sich hinauswachsen und neue Möglichkeiten für sich entdecken.</p>
+
+  <p>Mich berührt es zutiefst, wenn der Mut für den ersten Schritt die Angst besiegt, Augen zu leuchten beginnen und Hoffnung sich in Vorfreude verwandelt. Genau diese Momente geben meiner Arbeit Sinn – und schenken mir selbst Leichtigkeit, Dankbarkeit und Freude.</p>
+
+  <div class="clearfix"></div>
+
+  <img src="/images/logos/sca-mitglied.jpg" alt="SCA Mitglied" class="h-20 mt-6" />
+
+  <p>Möchtest du mehr erfahren? Gerne beantworte ich dir weitere Fragen in einem unverbindlichen persönlichen Kennenlerngespräch.</p>
+
+  <a href="https://calendly.com/coaching-geraldinelutz/20min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-4 px-6 py-2.5 bg-accent hover:bg-accent-dark text-primary-dark text-sm font-bold rounded-full transition-colors">Kennenlerngespräch buchen</a>
+</ContentLayout>

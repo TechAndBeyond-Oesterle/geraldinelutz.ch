@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import PricingCard from '../components/ui/PricingCard.astro';
+import Button from '../components/ui/Button.astro';
+
+const packages = [
+  {
+    image: '/images/packages/ausflug.jpg',
+    name: '"Ausflug"',
+    sessions: '1 Session',
+    duration: '60 Min',
+    tagline: 'Du willst nur mal kurz weg um dein Kopf zu lüften?',
+    description: 'Für die kleinen Anliegen im Leben.',
+    price: 'CHF 180',
+    priceDetail: 'pro Session + CHF 20/weitere 15 Min.',
+  },
+  {
+    image: '/images/packages/kurztrip.jpg',
+    name: 'Paket "Kurztrip"',
+    sessions: '3 Sessions',
+    duration: '60–90 Min',
+    tagline: 'Du wünschst Dir einen einfachen Tapetenwechsel?',
+    description: 'Für kleinere Themenbereiche.',
+    price: 'CHF 540',
+    priceDetail: 'Pauschal (3 Sessions)',
+  },
+  {
+    image: '/images/packages/expedition.jpg',
+    name: 'Paket "Expedition"',
+    sessions: '5 Sessions',
+    duration: '60–90 Min',
+    tagline: 'Du möchtest etwas weiter reisen?',
+    description: 'Für die umfangreicheren Herausforderungen.',
+    price: 'CHF 885',
+    priceDetail: 'Pauschal (5 Sessions)',
+  },
+  {
+    image: '/images/packages/weltreise.jpg',
+    name: 'Paket "Weltreise"',
+    sessions: '7 Sessions',
+    duration: '60–90 Min',
+    tagline: 'Du willst die Welt entdecken?',
+    description: 'Für weitreichende Veränderungen.',
+    price: 'CHF 1220',
+    priceDetail: 'Pauschal (7 Sessions)',
+  },
+  {
+    image: '/images/packages/sternenreise.jpg',
+    name: 'Paket "Sternenreise"',
+    sessions: '9 Sessions',
+    duration: '60–90 Min',
+    tagline: 'Du willst komplett durchstarten?',
+    description: 'Für die komplette Neuorientierung.',
+    price: 'CHF 1540',
+    priceDetail: 'Pauschal (9 Sessions)',
+  },
+];
+---
+
+<BaseLayout title="Angebot – géraldine lutz coaching" description="Coaching-Pakete für Privatpersonen: Von der einzelnen Session bis zur kompletten Neuorientierung. Preise ab CHF 180.">
+
+  <section class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <SectionHeading
+        title="Coaching für Privatpersonen"
+        subtitle="Für eine 1:1 Begleitung mit mir als Coach hast du die Wahl zwischen einzelnen Sessions und verschiedenen Pauschal-Paketen."
+      />
+
+      <p class="text-center text-text-light mb-12 max-w-2xl mx-auto">
+        Falls du ausserdem die Frage «wer bin ich wirklich?» gerne online und ganz in deinem eigenen Tempo beantworten möchtest, interessiert dich vielleicht das Online-Programm <a href="https://visionvibes.ch" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark underline">Schatzsucher*in</a>.
+      </p>
+
+      <!-- Pricing Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {packages.map((pkg) => (
+          <PricingCard {...pkg} />
+        ))}
+
+        <!-- Schatzsuche special card -->
+        <div class="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col border border-primary/10">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/packages/schatzsuche.jpg" alt="Schatzsuche – wer bist du wirklich?" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-serif text-xl font-semibold text-primary-dark">Schatzsuche</h3>
+            <p class="text-sm text-accent font-medium mt-1">Online-Programm</p>
+            <p class="text-sm text-text-light mt-3 italic">In Zusammenarbeit mit meiner geschätzten Coachingkollegin Melanie Kobel</p>
+            <p class="text-sm text-text-light mt-2 flex-1">
+              Unter dem Namen <strong>Vision Vibes</strong> begleiten wir dich mit unserem erprobten Konzept auf der Reise zu deinem wahren Ich.
+            </p>
+            <div class="mt-4 pt-4 border-t border-bg-alt">
+              <p class="text-2xl font-bold text-primary-dark">CHF 740</p>
+              <p class="text-xs text-text-light">5 umfangreiche Module</p>
+            </div>
+            <a
+              href="https://visionvibes.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-4 block w-full text-center px-4 py-2.5 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition-colors text-sm"
+            >
+              Mehr Infos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coachingthemen -->
+  <section class="bg-bg-alt py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <SectionHeading title="Coachingthemen" />
+      <div class="space-y-4 text-text-light leading-relaxed max-w-3xl mx-auto">
+        <p>So vielfältig wie wir Menschen sind, so vielfältig sind auch die Themen, die uns beschäftigen.</p>
+        <p>Vielleicht drehen deine Gedanken ständig im Kreis und du willst einfach mal aus dem Karussell aussteigen, in deinem Kopf Ordnung schaffen, und dadurch Klarheit und Struktur zurückgewinnen. Oder eine wichtige Entscheidung steht an, und du landest mit deinen Überlegungen immer wieder am selben Punkt des Zweifels.</p>
+        <p>Möglicherweise fragst du dich sogar, was denn eigentlich der Sinn deines Lebens ist, und ob du an deinem Arbeitsplatz überhaupt richtig bist oder ob deine Berufung eine andere ist. Oder du hast schon eine Vision deiner beruflichen Zukunft, weisst aber noch nicht, wie du sie umsetzen kannst.</p>
+        <p>Die Inhalte der einzelnen Coaching Sessions stimmen wir deshalb immer ganz individuell auf dich und deine Bedürfnisse ab.</p>
+        <p>Aber, was es auch ist, das dich gerade zermürbt: Gemeinsam werden wir herausfinden, wo du gerade stehst, was du verändern willst, was dein Ziel ist und wie du durch eine nachhaltige Veränderung dorthin kommst.</p>
+      </div>
+      <div class="mt-10 flex justify-center">
+        <img
+          src="/images/illustrations/themengebiete.png"
+          alt="Coaching-Themengebiete"
+          class="rounded-2xl shadow-md max-w-2xl w-full"
+          loading="lazy"
+        />
+      </div>
+      <div class="mt-10 text-center">
+        <Button href="/kontakt">Hast du noch Fragen?</Button>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

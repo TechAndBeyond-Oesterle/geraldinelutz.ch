@@ -1,0 +1,86 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface SidebarLink {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  breadcrumbs?: { label: string; href?: string }[];
+  sidebarLinks?: SidebarLink[];
+  sidebarTitle?: string;
+}
+
+const {
+  title,
+  description,
+  breadcrumbs = [],
+  sidebarLinks = [],
+  sidebarTitle = '',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<BaseLayout title={`${title} – géraldine lutz coaching`} description={description}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+    {breadcrumbs.length > 0 && (
+      <nav class="text-sm text-text-light mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          {breadcrumbs.map((crumb, i) => (
+            <li class="flex items-center gap-1.5">
+              <span class="text-text-light/50">/</span>
+              {crumb.href ? (
+                <a href={crumb.href} class="hover:text-primary transition-colors">{crumb.label}</a>
+              ) : (
+                <span class="text-text">{crumb.label}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    <div class:list={['flex flex-col lg:flex-row gap-10 lg:gap-14', !sidebarLinks.length && 'max-w-3xl']}>
+      {sidebarLinks.length > 0 && (
+        <aside class="lg:w-56 shrink-0">
+          <div class="lg:sticky lg:top-24">
+            {sidebarTitle && (
+              <h3 class="font-serif text-sm font-semibold text-primary-dark uppercase tracking-wider mb-3">
+                {sidebarTitle}
+              </h3>
+            )}
+            <nav class="flex flex-row lg:flex-col gap-1 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
+              {sidebarLinks.map((link) => (
+                <a
+                  href={link.href}
+                  class:list={[
+                    'whitespace-nowrap lg:whitespace-normal px-3 py-2 rounded-lg text-sm transition-colors',
+                    currentPath === link.href || currentPath === link.href + '/'
+                      ? 'bg-primary/10 text-primary-dark font-medium'
+                      : 'text-text-light hover:bg-bg-alt hover:text-text',
+                  ]}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </aside>
+      )}
+
+      <article class="flex-1 min-w-0">
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-primary-dark mb-8">
+          {title}
+        </h1>
+        <div class="prose">
+          <slot />
+        </div>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,8 @@
+# Redirects von alten WordPress-URLs zu neuen Routen
+/coaching-angebot/       /angebot       301
+/coaching-angebote/      /angebot       301
+/arbeitsweise-weg-zur-veraenderung/  /arbeitsweise  301
+/ueber-mich-als-coach/   /ueber-mich    301
+/kontakt/                /kontakt       301
+/datenschutzerklaerung/  /datenschutzerklaerung  301
+/impressum/              /impressum     301

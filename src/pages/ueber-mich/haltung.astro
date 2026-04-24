@@ -1,0 +1,30 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+const sidebarLinks = [
+  { label: 'Portrait', href: '/ueber-mich' },
+  { label: 'Laufbahn', href: '/ueber-mich/laufbahn' },
+  { label: 'Mission', href: '/ueber-mich/mission' },
+  { label: 'Haltung', href: '/ueber-mich/haltung' },
+  { label: 'Feedback', href: '/ueber-mich/feedback' },
+];
+---
+
+<ContentLayout
+  title="Haltung"
+  description="Meine Haltung: Offenheit, Wertschätzung und Begegnung auf Augenhöhe."
+  sidebarTitle="Über mich"
+  sidebarLinks={sidebarLinks}
+  breadcrumbs={[
+    { label: 'Über mich', href: '/ueber-mich' },
+    { label: 'Haltung' },
+  ]}
+>
+  <img src="/images/illustrations/haltung.jpg" alt="Meine Haltung als Coach" class="rounded-2xl shadow-md w-full mb-8" />
+
+  <p>In meiner subjektiven Wahrnehmung gibt es keine absolute Objektivität. Unsere Sicht auf uns selbst und die Welt wird stark von Mustern, Prägungen und Erfahrungen geprägt. Jeder Mensch bringt seine eigene Biografie mit, und damit eine individuelle Perspektive, die ihn einzigartig macht.</p>
+
+  <p>Wir tragen die Verantwortung für unser Denken, Fühlen und Handeln und damit auch dafür, wie wir uns und die Welt wahrnehmen. Auch wenn unser Umfeld Einfluss hat, behalten wir immer einen Spielraum für Entscheidungen. Wir können wählen, wie wir auf Herausforderungen reagieren, und dadurch wachsen und uns weiterentwickeln.</p>
+
+  <p>Dieses Verständnis prägt meinen Umgang mit anderen. Ich sehe in jeder Begegnung die Chance, Neues zu entdecken – für mein Gegenüber genauso wie für mich selbst. Treffe ich einen Menschen, begegne ich ihm offen, wertschätzend und auf Augenhöhe. Denn echte Verbindung entsteht, wenn wir einander vertrauensvoll begegnen und den Mut haben, uns aufeinander einzulassen.</p>
+</ContentLayout>
