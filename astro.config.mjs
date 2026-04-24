@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://geraldinelutz.ch',
+  site: 'https://techandbeyond-oesterle.github.io/geraldinelutz.ch',// 'https://geraldinelutz.ch',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]
